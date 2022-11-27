@@ -1,25 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import Navmenu from './components/Navmenu';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import About from './pages/About';
+import SingleProduct from './pages/SingleProduct';
+import Cart from './pages/Cart';
+import Admin from './pages/Admin';
+import LogIn from './pages/LogIn';
+import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
-function App() {
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ProductsProvider } from './contexts/ProductsContext';
+import { CartProvider } from './contexts/CartContext';
+
+const App = () => {
+  const [token, setToken] = useState(localStorage.getItem('userToken') ?? '');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <ProductsProvider>
+        <CartProvider>
+          <BrowserRouter>
+            <Navmenu token={token} setToken={setToken} />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/shop' element={<Shop />} />
+              <Route path='/product/:id' element={<SingleProduct />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/cart' element={<Cart />} />
+              {token ? (
+                <Route path='/admin' element={<Admin />} />
+              ) : (
+                <Route
+                  path='/login'
+                  element={<LogIn token={token} setToken={setToken} />}
+                />
+              )}
+
+              <Route path='*' element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </CartProvider>
+      </ProductsProvider>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,38 +1,90 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: lightgray; */
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*/ Navbar */
+
+/*/ carousel */
+
+.carouselSize {
+  height: 70vh;
+}
+.carouselItem {
+  background-image: url(../public/img/hero.jpg);
+  background-size: cover;
+  background-position: left;
+}
+.carousel-caption {
+  width: 400px;
+  height: max-content;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(87, 87, 87, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 576px) {
+  .carousel-caption {
+    width: 275px;
+    padding: 20px 10px 20px 10px;
   }
 }
+.offer {
+  transition: 0.2s ease-in-out;
+}
+.offer:hover {
+  border-color: #198754;
+  box-shadow: 0 0 10px 2px #198754;
+}
+
+/*/ Shop */
+.card {
+  height: 400px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.form-control:focus {
+  border-color: #198754;
+  box-shadow: 0 0 10px 2px #198754;
+}
+
+/*/ Single Product */
+
+form .qty {
+  width: 60px;
+}
+
+.footer {
+  margin-top: auto;
+}
+
