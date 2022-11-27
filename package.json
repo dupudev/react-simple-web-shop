@@ -1,6 +1,6 @@
 {
   "homepage": "http://dupudev.github.io/simple-web-shop/",
-  "name": "3_simple-web-shop",
+  "name": "simple-web-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
