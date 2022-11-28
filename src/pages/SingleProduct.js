@@ -21,13 +21,11 @@ const SingleProduct = () => {
   const [qty, setQty] = useState(1);
   const [modalShow, setModalShow] = useState(false);
 
-  const product = products.filter((item, idx) => {
+  const product = products.filter((item) => {
     if (item.id == params.id) {
       return item;
     }
   })[0];
-
-  // console.log(cart);
 
   const increment = () => {
     setQty((prev) => prev + 1);
@@ -128,7 +126,6 @@ const SingleProduct = () => {
               <ModalSingleProduct
                 show={modalShow}
                 onHide={() => setModalShow(false)}
-                
               />
             </Form>
           </div>
