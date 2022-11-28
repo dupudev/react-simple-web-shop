@@ -25,35 +25,57 @@ const Navmenu = ({ token, setToken }) => {
     <div>
       <Navbar bg='success' variant='dark' expand='md' collapseOnSelect>
         <Container>
-          <Navbar.Brand as={Link} to='/' href='/'>
+          <Navbar.Brand as={Link} to='/react-simple-web-shop' href='/'>
             Fake Store
           </Navbar.Brand>
           <NavbarToggle />
           <NavbarCollapse className='text-center'>
             <Nav className='ms-auto'>
-              <Nav.Link as={Link} to='/' href='/'>
+              <Nav.Link as={Link} to='/react-simple-web-shop' href='/'>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to='shop' href='shop'>
+              <Nav.Link as={Link} to='react-simple-web-shop/shop' href='shop'>
                 Shop
               </Nav.Link>
-              <Nav.Link as={Link} to='about' href='about' className='me-md-5'>
+              <Nav.Link
+                as={Link}
+                to='react-simple-web-shop/about'
+                href='react-simple-web-shop/about'
+                className='me-md-5'
+              >
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to='cart' href='cart' className='ms-md-5'>
+              <Nav.Link
+                as={Link}
+                to='react-simple-web-shop/cart'
+                href='react-simple-web-shop/cart'
+                className='ms-md-5'
+              >
                 Cart({cart.length})
               </Nav.Link>
               {token ? (
                 <>
-                  <Nav.Link as={Link} to='admin' href='admin'>
+                  <Nav.Link
+                    as={Link}
+                    to='react-simple-web-shop/admin'
+                    href='react-simple-web-shop/admin'
+                  >
                     Admin
                   </Nav.Link>
-                  <Nav.Link href='/' onClick={logOutHandler}>
+                  <Nav.Link
+                    href='/react-simple-web-shop'
+                    onClick={logOutHandler}
+                  >
                     Log Out
                   </Nav.Link>
                 </>
               ) : (
-                <Nav.Link as={Link} to='login' href='login' className=''>
+                <Nav.Link
+                  as={Link}
+                  to='react-simple-web-shop/login'
+                  href='react-simple-web-shop/login'
+                  className=''
+                >
                   Log In
                 </Nav.Link>
               )}
