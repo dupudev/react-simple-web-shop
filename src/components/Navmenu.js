@@ -18,7 +18,7 @@ const Navmenu = ({ token, setToken }) => {
   const logOutHandler = () => {
     setToken('');
     localStorage.removeItem('userToken');
-    navigate('react-simple-web-shop/');
+    navigate('/react-simple-web-shop/');
   };
 
   return (
@@ -34,21 +34,21 @@ const Navmenu = ({ token, setToken }) => {
               <Nav.Link as={Link} to='/react-simple-web-shop' href='/'>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to='react-simple-web-shop/shop' href='shop'>
+              <Nav.Link as={Link} to='/react-simple-web-shop/shop' href='shop'>
                 Shop
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                to='react-simple-web-shop/about'
-                href='react-simple-web-shop/about'
+                to='/react-simple-web-shop/about'
+                href='/react-simple-web-shop/about'
                 className='me-md-5'
               >
                 About
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                to='react-simple-web-shop/cart'
-                href='react-simple-web-shop/cart'
+                to='/react-simple-web-shop/cart'
+                href='/react-simple-web-shop/cart'
                 className='ms-md-5'
               >
                 Cart({cart.length})
@@ -57,8 +57,8 @@ const Navmenu = ({ token, setToken }) => {
                 <>
                   <Nav.Link
                     as={Link}
-                    to='react-simple-web-shop/admin'
-                    href='react-simple-web-shop/admin'
+                    to='/react-simple-web-shop/admin'
+                    href='/react-simple-web-shop/admin'
                   >
                     Admin
                   </Nav.Link>
@@ -72,8 +72,8 @@ const Navmenu = ({ token, setToken }) => {
               ) : (
                 <Nav.Link
                   as={Link}
-                  to='react-simple-web-shop/login'
-                  href='react-simple-web-shop/login'
+                  to='/react-simple-web-shop/login'
+                  href='/react-simple-web-shop/login'
                   className=''
                 >
                   Log In

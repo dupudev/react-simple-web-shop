@@ -14,7 +14,10 @@ const NotFound = () => {
         Page not found!
       </h4>
       <br />
-      <Button variant='success' onClick={() => navigate('/')}>
+      <Button
+        variant='success'
+        onClick={() => navigate('/react-simple-web-shop/')}
+      >
         Back to Home page
       </Button>
     </Container>

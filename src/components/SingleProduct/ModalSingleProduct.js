@@ -14,7 +14,7 @@ const ModalSingleProduct = (props) => {
       <Modal.Body className='text-center py-4'>
         <Button
           variant='primary'
-          onClick={() => navigate('react-simple-web-shop/shop')}
+          onClick={() => navigate('/react-simple-web-shop/shop')}
         >
           Back to store
         </Button>
@@ -23,7 +23,7 @@ const ModalSingleProduct = (props) => {
         </Button>
         <Button
           variant='success'
-          onClick={() => navigate('react-simple-web-shop/cart')}
+          onClick={() => navigate('/react-simple-web-shop/cart')}
           className='ms-3'
         >
           Go to Cart

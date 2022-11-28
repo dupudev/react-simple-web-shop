@@ -17,7 +17,7 @@ const CarouselComp = () => {
             </p>
             <Button
               variant='warning'
-              onClick={() => navigate('react-simple-web-shop/shop')}
+              onClick={() => navigate('/react-simple-web-shop/shop')}
             >
               Shop Now
             </Button>
@@ -31,7 +31,7 @@ const CarouselComp = () => {
             </p>
             <Button
               variant='warning'
-              onClick={() => navigate('react-simple-web-shop/shop')}
+              onClick={() => navigate('/react-simple-web-shop/shop')}
             >
               Shop Now
             </Button>
@@ -45,7 +45,7 @@ const CarouselComp = () => {
             </p>
             <Button
               variant='warning'
-              onClick={() => navigate('react-simple-web-shop/shop')}
+              onClick={() => navigate('/react-simple-web-shop/shop')}
             >
               Shop Now
             </Button>

@@ -17,12 +17,7 @@ const ModalCartRemove = (props) => {
   };
 
   return (
-    <Modal
-      {...props}
-      size='sm'
-      centered
-      animation={false}
-    >
+    <Modal {...props} size='sm' centered animation={false}>
       <Modal.Body className='text-center py-4'>
         <Button variant='danger' onClick={() => modalRemoveItem()} className=''>
           Remove

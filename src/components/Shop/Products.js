@@ -107,7 +107,7 @@ const Products = () => {
                     <Button
                       variant='success'
                       onClick={() =>
-                        navigate(`react-simple-web-shop/product/${product.id}`)
+                        navigate(`/react-simple-web-shop/product/${product.id}`)
                       }
                     >
                       Details
