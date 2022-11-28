@@ -34,7 +34,7 @@ const App = () => {
               <Route path='react-simple-web-shop/about' element={<About />} />
               <Route path='react-simple-web-shop/cart' element={<Cart />} />
               {token ? (
-                <Route path='react-simple-web-shop/admin' element={<Admin />} />
+                <Route path='/admin' element={<Admin />} />
               ) : (
                 <Route
                   path='react-simple-web-shop/login'
@@ -42,7 +42,7 @@ const App = () => {
                 />
               )}
 
-              <Route path='*' element={<NotFound />} />
+              <Route path='react-simple-web-shop/*' element={<NotFound />} />
             </Routes>
             <Footer />
           </BrowserRouter>

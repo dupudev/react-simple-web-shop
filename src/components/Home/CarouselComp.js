@@ -15,7 +15,10 @@ const CarouselComp = () => {
             <p className='pb-3'>
               Nulla vitae elit libero, a pharetra augue mollis interdum.
             </p>
-            <Button variant='warning' onClick={() => navigate('/shop')}>
+            <Button
+              variant='warning'
+              onClick={() => navigate('react-simple-web-shop/shop')}
+            >
               Shop Now
             </Button>
           </Carousel.Caption>
@@ -26,7 +29,10 @@ const CarouselComp = () => {
             <p className='pb-3'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <Button variant='warning' onClick={() => navigate('/shop')}>
+            <Button
+              variant='warning'
+              onClick={() => navigate('react-simple-web-shop/shop')}
+            >
               Shop Now
             </Button>
           </Carousel.Caption>
@@ -37,7 +43,10 @@ const CarouselComp = () => {
             <p className='pb-3'>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
-            <Button variant='warning' onClick={() => navigate('/shop')}>
+            <Button
+              variant='warning'
+              onClick={() => navigate('react-simple-web-shop/shop')}
+            >
               Shop Now
             </Button>
           </Carousel.Caption>

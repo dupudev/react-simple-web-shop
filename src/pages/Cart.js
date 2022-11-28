@@ -109,7 +109,10 @@ const Cart = () => {
       ) : (
         <div className='text-center'>
           <h3 className='mb-4'>Cart is empty!</h3>
-          <Button variant='success' onClick={() => navigate('/shop')}>
+          <Button
+            variant='success'
+            onClick={() => navigate('react-simple-web-shop/shop')}
+          >
             Return to Shop
           </Button>
         </div>

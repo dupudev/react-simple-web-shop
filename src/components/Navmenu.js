@@ -18,7 +18,7 @@ const Navmenu = ({ token, setToken }) => {
   const logOutHandler = () => {
     setToken('');
     localStorage.removeItem('userToken');
-    navigate('/');
+    navigate('react-simple-web-shop/');
   };
 
   return (

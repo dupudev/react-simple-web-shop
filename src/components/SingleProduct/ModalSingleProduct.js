@@ -10,14 +10,12 @@ const ModalSingleProduct = (props) => {
   const navigate = useNavigate();
 
   return (
-    <Modal
-      {...props}
-      size='md'
-      centered
-      animation={false}
-    >
+    <Modal {...props} size='md' centered animation={false}>
       <Modal.Body className='text-center py-4'>
-        <Button variant='primary' onClick={() => navigate('/shop')}>
+        <Button
+          variant='primary'
+          onClick={() => navigate('react-simple-web-shop/shop')}
+        >
           Back to store
         </Button>
         <Button variant='secondary' onClick={props.onHide} className='ms-3'>
@@ -25,7 +23,7 @@ const ModalSingleProduct = (props) => {
         </Button>
         <Button
           variant='success'
-          onClick={() => navigate('/cart')}
+          onClick={() => navigate('react-simple-web-shop/cart')}
           className='ms-3'
         >
           Go to Cart
