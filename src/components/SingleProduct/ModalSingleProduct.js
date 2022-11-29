@@ -11,20 +11,24 @@ const ModalSingleProduct = (props) => {
 
   return (
     <Modal {...props} size='md' centered animation={false}>
-      <Modal.Body className='text-center py-4'>
+      <Modal.Body className='d-flex flex-column d-sm-block text-center py-4'>
         <Button
           variant='primary'
           onClick={() => navigate('/react-simple-web-shop/shop')}
         >
           Back to store
         </Button>
-        <Button variant='secondary' onClick={props.onHide} className='ms-3'>
+        <Button
+          variant='secondary'
+          onClick={props.onHide}
+          className='my-2 ms-sm-3'
+        >
           Keep shopping
         </Button>
         <Button
           variant='success'
           onClick={() => navigate('/react-simple-web-shop/cart')}
-          className='ms-3'
+          className='ms-sm-3'
         >
           Go to Cart
         </Button>

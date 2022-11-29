@@ -43,17 +43,15 @@ const Products = () => {
     <Container className='my-5'>
       <Row className='mb-5 px-md-5'>
         <Col xs={10} sm={10} md={8} lg={4} className='mx-auto mb-4'>
-          <Form>
-            <Form.Group>
-              <Form.Control
-                className='border-success'
-                type='text'
-                placeholder='Search'
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-              />
-            </Form.Group>
-          </Form>
+          <Form.Group>
+            <Form.Control
+              className='border-success'
+              type='text'
+              placeholder='Search'
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+            />
+          </Form.Group>
         </Col>
         <Col
           sm={12}
