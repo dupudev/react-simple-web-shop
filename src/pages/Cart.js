@@ -46,7 +46,7 @@ const Cart = () => {
                   lg={2}
                   className='d-flex align-items-center justify-content-start justify-content-xl-center'
                 >
-                  <Link to={`/react-simple-web-shop/product/${item.id}`}>
+                  <Link to={`/product/${item.id}`}>
                     <img
                       src={`${item.image}`}
                       alt=''
@@ -62,7 +62,7 @@ const Cart = () => {
                 >
                   <Link
                     style={{ color: 'black' }}
-                    to={`/react-simple-web-shop/product/${item.id}`}
+                    to={`/product/${item.id}`}
                   >
                     <h5>{item.title}</h5>
                   </Link>
@@ -114,7 +114,7 @@ const Cart = () => {
           <h3 className='mb-4'>Cart is empty!</h3>
           <Button
             variant='success'
-            onClick={() => navigate('/react-simple-web-shop/shop')}
+            onClick={() => navigate('/shop')}
           >
             Return to Shop
           </Button>

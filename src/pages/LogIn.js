@@ -30,7 +30,7 @@ const LogIn = ({ token, setToken }) => {
       .then((res) => {
         setToken(res.data.token);
         localStorage.setItem('userToken', res.data.token);
-        navigate('/react-simple-web-shop/admin');
+        navigate('/admin');
       })
       .catch((err) => {
         console.log(err.response);

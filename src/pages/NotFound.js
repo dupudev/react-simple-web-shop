@@ -16,7 +16,7 @@ const NotFound = () => {
       <br />
       <Button
         variant='success'
-        onClick={() => navigate('/react-simple-web-shop/')}
+        onClick={() => navigate('/')}
       >
         Back to Home page
       </Button>

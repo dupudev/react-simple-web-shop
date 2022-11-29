@@ -14,7 +14,7 @@ const ModalSingleProduct = (props) => {
       <Modal.Body className='d-flex flex-column d-sm-block text-center py-4'>
         <Button
           variant='primary'
-          onClick={() => navigate('/react-simple-web-shop/shop')}
+          onClick={() => navigate('/shop')}
         >
           Back to store
         </Button>
@@ -27,7 +27,7 @@ const ModalSingleProduct = (props) => {
         </Button>
         <Button
           variant='success'
-          onClick={() => navigate('/react-simple-web-shop/cart')}
+          onClick={() => navigate('/cart')}
           className='ms-sm-3'
         >
           Go to Cart

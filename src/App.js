@@ -25,24 +25,24 @@ const App = () => {
           <HashRouter>
             <Navmenu token={token} setToken={setToken} />
             <Routes>
-              <Route path='react-simple-web-shop/' element={<Home />} />
-              <Route path='react-simple-web-shop/shop' element={<Shop />} />
+              <Route path='/' element={<Home />} />
+              <Route path='shop' element={<Shop />} />
               <Route
-                path='react-simple-web-shop/product/:id'
+                path='product/:id'
                 element={<SingleProduct />}
               />
-              <Route path='react-simple-web-shop/about' element={<About />} />
-              <Route path='react-simple-web-shop/cart' element={<Cart />} />
+              <Route path='about' element={<About />} />
+              <Route path='cart' element={<Cart />} />
               {token ? (
-                <Route path='react-simple-web-shop/admin' element={<Admin />} />
+                <Route path='admin' element={<Admin />} />
               ) : (
                 <Route
-                  path='react-simple-web-shop/login'
+                  path='login'
                   element={<LogIn token={token} setToken={setToken} />}
                 />
               )}
 
-              <Route path='react-simple-web-shop/*' element={<NotFound />} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
             <Footer />
           </HashRouter>

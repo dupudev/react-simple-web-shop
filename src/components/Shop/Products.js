@@ -104,9 +104,7 @@ const Products = () => {
                     <p className='h3 mb-0'>${product.price}</p>
                     <Button
                       variant='success'
-                      onClick={() =>
-                        navigate(`/react-simple-web-shop/product/${product.id}`)
-                      }
+                      onClick={() => navigate(`/product/${product.id}`)}
                     >
                       Details
                     </Button>

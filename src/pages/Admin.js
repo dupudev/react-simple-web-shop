@@ -276,7 +276,7 @@ const Admin = () => {
                 lg={2}
                 className='d-flex align-items-center justify-content-start justify-content-xl-center'
               >
-                <Link to={`/react-simple-web-shop/product/${item.id}`}>
+                <Link to={`/product/${item.id}`}>
                   <img src={`${item.image}`} alt='' style={{ width: '75px' }} />
                 </Link>
               </Col>
@@ -286,10 +286,7 @@ const Admin = () => {
                 lg={9}
                 className='d-flex flex-column align-items-start justify-content-center'
               >
-                <Link
-                  style={{ color: 'black' }}
-                  to={`/react-simple-web-shop/product/${item.id}`}
-                >
+                <Link style={{ color: 'black' }} to={`/product/${item.id}`}>
                   <h5>{item.title}</h5>
                 </Link>
                 <p className='my-1'>
