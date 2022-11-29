@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ProductsProvider } from './contexts/ProductsContext';
 import { CartProvider } from './contexts/CartContext';
 
@@ -22,7 +22,7 @@ const App = () => {
     <div className='App'>
       <ProductsProvider>
         <CartProvider>
-          <BrowserRouter>
+          <HashRouter>
             <Navmenu token={token} setToken={setToken} />
             <Routes>
               <Route path='react-simple-web-shop/' element={<Home />} />
@@ -45,7 +45,7 @@ const App = () => {
               <Route path='react-simple-web-shop/*' element={<NotFound />} />
             </Routes>
             <Footer />
-          </BrowserRouter>
+          </HashRouter>
         </CartProvider>
       </ProductsProvider>
     </div>
