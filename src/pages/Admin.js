@@ -38,12 +38,13 @@ const Admin = () => {
 
   const addProduct = (event) => {
     event.preventDefault();
-    const prodIds = [];
+    // const prodIds = [];
 
-    products.forEach((prod) => {
-      prodIds.push(prod.id);
-    });
-    let maxId = Math.max(...prodIds);
+    // products.forEach((prod) => {
+    //   prodIds.push(prod.id);
+    // });
+    // let maxId = Math.max(...prodIds);
+    let maxId = products.slice(-1)[0].id;
 
     let newProduct = {
       id: maxId + 1,

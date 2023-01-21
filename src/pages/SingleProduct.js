@@ -94,7 +94,6 @@ const SingleProduct = () => {
           </div>
           <div className='mb-2'>
             <p>Quantity:</p>
-
             <Form
               onSubmit={(event) => addToCart(event)}
               className='d-flex flex-row align-items-center'

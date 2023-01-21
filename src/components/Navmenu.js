@@ -34,7 +34,7 @@ const Navmenu = ({ token, setToken }) => {
               <Nav.Link as={Link} to='/' href='/'>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to='/shop' href='shop'>
+              <Nav.Link as={Link} to='/shop' href='/shop'>
                 Shop
               </Nav.Link>
               <Nav.Link as={Link} to='/about' href='/about' className='me-md-5'>

@@ -60,10 +60,7 @@ const Cart = () => {
                   lg={9}
                   className='d-flex flex-column align-items-start justify-content-start'
                 >
-                  <Link
-                    style={{ color: 'black' }}
-                    to={`/product/${item.id}`}
-                  >
+                  <Link style={{ color: 'black' }} to={`/product/${item.id}`}>
                     <h5>{item.title}</h5>
                   </Link>
                   <p className='my-1'>
@@ -104,7 +101,11 @@ const Cart = () => {
           <div className='d-flex align-items-center justify-content-end py-4'>
             Total:&nbsp;
             <span className='fw-bold'>${Number(total.toFixed(2))}</span>
-            <Button variant='warning' className='ms-4' onClick={clearCart}>
+            <Button
+              variant='warning'
+              className='ms-4'
+              onClick={() => clearCart()}
+            >
               Clear Cart
             </Button>
           </div>
@@ -112,10 +113,7 @@ const Cart = () => {
       ) : (
         <div className='text-center'>
           <h3 className='mb-4'>Cart is empty!</h3>
-          <Button
-            variant='success'
-            onClick={() => navigate('/shop')}
-          >
+          <Button variant='success' onClick={() => navigate('/shop')}>
             Return to Shop
           </Button>
         </div>
