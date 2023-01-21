@@ -4,7 +4,7 @@
 
 ## About
 
-Simple fake web shop made with React and Bootstrap-Bootstrap. Users can search and filter items by category and add them to cart. There is also an option to log in as admin. Admin page can be used to edit and remove existing items or add new ones. If new item is added with a category that doesn't exist, it will be created automatically. Also, if all items from one category are deleted, the whole category will be deleted as well.
+Simple fake web shop made with React and React-Bootstrap. Users can search and filter items by category and add them to cart. There is also an option to log in as admin. Admin page can be used to edit and remove existing items or add new ones. If new item is added with a category that doesn't exist, it will be created automatically. Also, if all items from one category are deleted, the whole category will be deleted as well.
 
 ## Built With
 
