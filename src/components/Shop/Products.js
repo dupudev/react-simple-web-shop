@@ -11,6 +11,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import ProductsContext from '../../contexts/ProductsContext';
 import { useNavigate } from 'react-router-dom';
 
+import useDebounce from '../../utils/useDebounce';
+
 const Products = () => {
   const navigate = useNavigate();
 
@@ -18,6 +20,8 @@ const Products = () => {
   const [allCategories, setAllCategories] = useState([]);
   const [category, setCategory] = useState('');
   const [search, setSearch] = useState('');
+
+  const debouncedSearch = useDebounce(search, 500);
 
   useEffect(() => {
     const tempAllCategs = [];
@@ -29,12 +33,15 @@ const Products = () => {
     setAllCategories(tempAllCategs);
   }, [products]);
 
-  const regex = new RegExp(search, 'gi');
+  // const regex = new RegExp(debouncedSearch, 'gi');
 
   const filteredProducts = products.filter((prod) => {
-    if (category === '' && prod.title.match(regex)) {
+    if (category === '' && prod.title.match(debouncedSearch)) {
       return prod;
-    } else if (prod.category === category && prod.title.match(regex)) {
+    } else if (
+      prod.category === category &&
+      prod.title.match(debouncedSearch)
+    ) {
       return prod;
     }
   });

@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Spinner from 'react-bootstrap/Spinner';
 ///--------------------------------------
 
 import React, { useState } from 'react';
@@ -16,9 +17,12 @@ const LogIn = ({ token, setToken }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loggingIn, setLoggingIn] = useState(false);
 
   const loginHandler = () => {
     setError('');
+    setLoggingIn(true);
+
     axios({
       url: 'https://fakestoreapi.com/auth/login',
       method: 'POST',
@@ -31,10 +35,12 @@ const LogIn = ({ token, setToken }) => {
         setToken(res.data.token);
         localStorage.setItem('userToken', res.data.token);
         navigate('/admin');
+        setLoggingIn(false);
       })
       .catch((err) => {
         console.log(err.response);
         setError(err.response.data);
+        setLoggingIn(false);
       });
   };
 
@@ -66,15 +72,24 @@ const LogIn = ({ token, setToken }) => {
                 onChange={(event) => setPassword(event.target.value)}
               />
             </Form.Group>
-            {error && (
-              <Form.Text className='text-danger'>
-                {error.charAt(0).toUpperCase() + error.slice(1)}!
-              </Form.Text>
-            )}
+
             <Form.Group className='text-center mt-4'>
               <Button variant='success' className='w-50' onClick={loginHandler}>
                 Log In
               </Button>
+
+              {loggingIn && (
+                <Spinner
+                  animation='border'
+                  variant='success'
+                  className='d-flex mx-auto mt-4'
+                />
+              )}
+              {error && (
+                <Form.Text className='text-danger d-block mt-3'>
+                  {error.charAt(0).toUpperCase() + error.slice(1)}!
+                </Form.Text>
+              )}
             </Form.Group>
           </Form>
         </Col>
